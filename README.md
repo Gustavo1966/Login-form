@@ -1,2 +1,2 @@
 # Login-form based on Bootstrap 5.2
-Login Form Sencilla - Fija y centrada, o tipo modal con visualizador de la clave.
+Simple Login Form - Fixed and centered on page, and Modal type Login, with Hide/Show Password field using Eye icon.
