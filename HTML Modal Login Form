@@ -93,36 +93,6 @@
             </div>
         </div>
     </div>
-    <script>
-        $(document).ready(function() {
-            $('#login-form').submit(function(e) {
-                e.preventDefault()
-                start_load()
-                if ($(this).find('.alert-danger').length > 0)
-                    $(this).find('.alert-danger').remove();
-                $.ajax({
-                    url: 'ajax.php?action=login',
-                    method: 'POST',
-                    data: $(this).serialize(),
-                    error: err => {
-                        console.log(err)
-                        end_load();
-
-                    },
-                    success: function(resp) {
-                        if (resp == 1) {
-                            location.href = 'index.php?page=inicio';
-                        } else {
-                            $('#login-form').prepend('<div class="alert alert-danger">Usuario o password es incorrecto.</div>')
-                            end_load();
-                        }
-                    }
-                })
-            })
-        })
-
-    </script>
-
 <script>
         const togglePassword = document.querySelector("#togglePassword");
         const password = document.querySelector("#password");
